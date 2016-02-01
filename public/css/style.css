@@ -1,0 +1,47 @@
+html, body {
+    height: 100%;
+}
+
+body, h1 {
+    margin: 0;
+    font-family: Arial;
+}
+
+h1 {
+    margin: 10px 0;
+    color: darkblue;
+}
+
+body {
+
+}
+
+.content { 
+    width: 80%;
+    padding: 20px;
+}
+input[type=text].form-control { width: 100%; margin-bottom: 5px; display: inline; }
+textarea.form-control { width: 100%; display: inline; }
+button.form-control { width: 100%; display: inline; background-color: #CCC }
+
+article:empty {
+    display: none;
+}
+
+
+form {
+    
+}
+
+input, button {
+    margin: 0 1em;
+    padding: .5em;
+}
+
+button {
+    border: solid 1px;
+}
+
+button:hover {
+    color: yellow;
+}
