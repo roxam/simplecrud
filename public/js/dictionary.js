@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    $.getJSON('/dictionary-api', printTerms);
+    $.getJSON('/articles', printTerms);
     $('form').submit(function (e) {
         e.preventDefault();
         $.post('/dictionary-api', {title: $('#title').val(), content: $('#content').val()}, printTerms);
@@ -15,11 +15,5 @@ function printTerms(terms) {
         $('<h2>').text(this.title).appendTo('article');
         $('<p>').text(this.content).appendTo('article');
     });
-    /*$('dt').off('dblclick').dblclick(function() {
-        $.ajax({
-            url: '/dictionary-api/' + $(this).text(),
-            type: 'DELETE',
-            success: printTerms
-        });
-    });*/
+    
 }
