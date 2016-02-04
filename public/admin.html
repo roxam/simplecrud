@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no"/>
+    <meta charset="utf-8">
+
+    <title>Knowledgebase</title>
+
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+
+</head>
+<body>
+    <div class="content">
+
+        <h1>Knowledgebase - Admin</h1>
+        <h2>Edit an existing article</h2>
+        <form>
+            <div id="injected"></div>
+        </form>
+        
+        <h2>Add a new article</h2>
+        <form>
+            <input type="text" id="title" name="title" class="form-control" required />
+            <textarea rows="5" cols="30" id="content" name="content" class="form-control" required></textarea>
+            <button class="form-control">Add New Article</button>
+        </form>
+    </div>
+
+    <script src="/js/jquery.min.js" type="text/javascript"></script>
+    <script src="/js/admin.js" type="text/javascript"></script>
+
+</body>
+</html>

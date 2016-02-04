@@ -23,13 +23,23 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 app.use(express.static("./public"));
 
-
-/* GET Userlist page. */
+/* GET articles page */
 app.get('/articles', function(req, res) {
     db.collection('articles').find().toArray(function(err, results) {
         res.json(results);
     });
 });
 
+/* POST to articles page */
+app.post('/articles', function(req, res) {
+    db.collection('articles').insert(req.body);
+});
+
+/* GET articles page */
+app.get('/admin', function(req, res) {
+    db.collection('articles').find().toArray(function(err, results) {
+        res.sendFile(__dirname + '/public/admin.html');
+    });
+});
 
 module.exports = app;
