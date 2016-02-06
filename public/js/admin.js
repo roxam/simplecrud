@@ -1,35 +1,39 @@
-$(document).ready(function () {
+(function(){
 
-    $.getJSON('/articles', printTerms);
-    $('form').submit(function (e) {
-        e.preventDefault();
-        $.post('/articles', {title: $('#title').val(), content: $('#content').val()}, printTerms);
-        this.reset();
-    });
+    var admin = angular.module('articleAdmin',[]);
 
-});
+    admin.controller('ArticleAdminController',['$scope','$http','$sce',function($scope, $http, $sce){
 
-function printTerms(terms) {
-    $('article').empty();
-    
-    $.each(terms, function (index, value) {
+
+        $http.get('/articles').then(function(printTerms){
+            $scope.articleAdminData = printTerms.data;
+
+
+        });
         
-        $('<input type="checkbox" value="'+ this._id + '">').appendTo('#injected');
-        $('<span>').text(this.title).appendTo('#injected');
-        $('<p>').text(this.content).appendTo('#injected');
-    });
 
-    /*
-    for(i=0;i<terms.length;i++) {
-        console.log(i);
-        if(i===0) {
-            $('<form>').appendTo('article');
-        } 
-        $('<input type="checkbox" id="'+ i + '" value="'+ this._id + '">').appendTo('article');
-        $('<p>').text(this.title).appendTo('article');
-        $('<p>').text(this.content).appendTo('article');
-        
-    }
-    */
-    
-}
+        $('form').submit(function (e) {
+            e.preventDefault();
+            $.post('/articles', {title: $('#title').val(), content: $('#content').val()}, $scope.printTerms);
+            
+            
+        });
+
+        // if any of the links are clicked on
+        $('.content').delegate('.editLink', 'click', function () {
+            var recordId = $(this).attr('value');
+            var titleSpan = $(this).find('.titleSpan').html();
+            var contentSpan = $(this).find('.contentSpan').html();
+            
+            // don't append the input if it's already there
+            if($('#'+recordId+' > input').length < 1) {
+                $('<input type="text" value="'+titleSpan+'"/>').appendTo('#'+recordId);
+                $('<textarea>'+contentSpan+'</textarea>').appendTo('#'+recordId);
+            }
+        });
+
+
+
+    }]);
+
+})();

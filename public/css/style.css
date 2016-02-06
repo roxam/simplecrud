@@ -28,6 +28,13 @@ article:empty {
     display: none;
 }
 
+.titleSpan { display: block; }
+.editLink + div > input, .editLink + div > textarea {
+    display: block;
+    width: 100%
+}
+
+
 
 form {
     
