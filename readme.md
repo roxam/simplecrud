@@ -12,7 +12,6 @@ npm install -g node-dev
 ```
 Then to start the app in development mode with:
 ```
-node-dev app.js
+npm run dev
 ```
 
-More to come...
