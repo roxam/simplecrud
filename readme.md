@@ -1,6 +1,6 @@
 # SimpleCRUD
 
-## A simple <sup>[1](#CRUD)</sup> app for the <sup>[2](#MEAN)</sup> stack
+## A simple CRUD<sup>[1](#CRUD)</sup> app for the MEAN<sup>[2](#MEAN)</sup> stack
 
 ###1. Prerequisites
 
@@ -43,11 +43,11 @@ In a new terminal window, run the tests
 npm run e2e
 ```
 
-<a name="CRUD">1</a>CRUD - Create Read Update Destroy
-<a name="MEAN">2</a>MEAN - Mongo Express Angular Node.js
-<a name="commands">3</a>commands for making a directory and CDing into it:
+- <a name="CRUD">1</a>CRUD - Create Read Update Destroy
+- <a name="MEAN">2</a>MEAN - Mongo Express Angular Node.js
+- <a name="commands">3</a>commands for making a directory and CDing into it:
 ```
 mkdir my-directory-name
 cd my-directory-name
 ```
-<a name="dev">4</a>development mode is not suitabe for applications running in a production environment
+- <a name="dev">4</a>development mode is not suitabe for applications running in a production environment
