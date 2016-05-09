@@ -9,6 +9,7 @@ Make a new directory and cd into it:
 git clone https://github.com/roxam/simplecrud.git .
 npm install
 npm install -g node-dev
+npm install -g karma-cli
 ```
 Then to start the app in development mode with:
 ```

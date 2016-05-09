@@ -8,21 +8,39 @@
     "url": "https://github.com/roxam/simplecrud"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "./node_modules/karma/bin/karma start karma.conf.js",
     "build-css": "node-sass --include-path scss scss/main.scss   public/css/main.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\"",
-    "dev": "npm run build-css & npm run watch-css & node-dev app.js"
+    "dev": "npm run build-css & npm test & npm run watch-css & node-dev app.js",
+    "build": "browserify public/js -o browserified.js"
   },
   "author": "Roxane Ambrose",
   "license": "MIT",
+  "devDependencies": {
+    "angular-mocks": "^1.5.5",  
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-jasmine": "^0.3.8",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "karma-requirejs": "^0.2.6",
+    "phantomjs-prebuilt": "^2.1.7"
+  },
   "dependencies": {
     "angular": "1.5.5",
+    "binary-parser": "1.1.5",
     "body-parser": "1.15.0",
     "bootstrap": "3.3.6",
+    "browserify": "^13.0.0",
     "express": "4.13.4",
     "jquery": "2.2.0",
-    "mongodb": "2.1.4",
+    "kerberos": "0.0.21",
+    "mongodb": "2.1.18",
+    "mongoose": "4.4.14",
     "node-sass": "^3.4.2",
-    "nodemon": "^1.8.1"
+    "nodemon": "^1.8.1",
+    "phantomjs-prebuilt": "2.1.7",
+    "protractor": "^3.3.0",
+    "request": "2.72.0",
+    "requirejs": "*"
   }
 }

@@ -42,4 +42,8 @@ app.get('/admin', function(req, res) {
     });
 });
 
+exports.closeServer = function(){
+  server.close();
+}
+
 module.exports = app;
