@@ -12,7 +12,9 @@
     "build-css": "node-sass --include-path scss scss/main.scss   public/css/main.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\"",
     "dev": "npm run build-css & npm test & npm run watch-css & node-dev app.js",
-    "build": "browserify public/js -o browserified.js"
+    "e2e-update": "./node_modules/protractor/bin/webdriver-manager update",
+    "e2e-start": "./node_modules/protractor/bin/webdriver-manager start",
+    "e2e": "./node_modules/protractor/bin/protractor e2e/conf.js"
   },
   "author": "Roxane Ambrose",
   "license": "MIT",
