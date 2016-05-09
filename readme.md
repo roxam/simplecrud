@@ -15,6 +15,8 @@ nohup mongod >/dev/null 2>&1 &
 ```
 You can close this terminal tab.
 
+You also must have node.js installed. [Instructions here.](https://nodejs.org/en/download/) 
+
 ###2. Installation
 
 Make a new directory and cd into it<sup>[3](#commands)</sup>, then run:
