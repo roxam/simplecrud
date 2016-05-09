@@ -1,6 +1,6 @@
 # SimpleCRUD
 
-## A simple CRUD* app for the MEAN** stack
+## A simple CRUD** app for the MEAN*** stack
 
 ###1. Prerequisites
 
@@ -15,7 +15,7 @@ You can close this terminal tab.
 
 ###2. Installation
 
-Make a new directory and cd into it***, then run:
+Make a new directory and cd into it****, then run:
 ```
 git clone https://github.com/roxam/simplecrud.git .
 npm install
@@ -23,7 +23,7 @@ npm install -g node-dev
 npm install -g karma-cli
 ```
 
-###3. Running the app in development mode****
+###3. Running the app in development mode*****
 ```
 npm run dev
 ```
@@ -43,11 +43,11 @@ In a new terminal window, run the tests
 npm run e2e
 ```
 
-*CRUD - Create Read Update Destroy
-**MEAN - Mongo Express Angular Node.js
-***commands for making a directory and CDing into it:
+**CRUD - Create Read Update Destroy
+***MEAN - Mongo Express Angular Node.js
+****commands for making a directory and CDing into it:
 ```
 mkdir my-directory-name
 cd my-directory-name
 ```
-****development mode is not suitabe for applications running in a production environment
+*****development mode is not suitabe for applications running in a production environment
