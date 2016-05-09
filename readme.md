@@ -2,6 +2,8 @@
 
 ## A simple CRUD<sup>[1](#CRUD)</sup> app for the MEAN<sup>[2](#MEAN)</sup> stack
 
+All commands are run on a command line - on a Mac, this is in the Terminal app. 
+
 ###1. Prerequisites
 
 Your computer must have MongoDB installed and running. On a Mac, this can easily be done using Homebrew. 
@@ -27,6 +29,9 @@ npm install -g karma-cli
 ```
 npm run dev
 ```
+Now open your browser of choice and go to the index page at: [http://localhost:3000][http://localhost:3000]
+
+Add some new articles at: [http://localhost:3000/admin][http://localhost:3000/admin]
 
 ###4. (Optional) End-to-end testing using Protractor
 
@@ -43,8 +48,9 @@ In a new terminal window, run the tests
 npm run e2e
 ```
 
+---
 
-Notes:
+Footnotes:
 
 - <a name="CRUD">1</a> CRUD - Create Read Update Destroy
 - <a name="MEAN">2</a> MEAN - Mongo Express Angular Node.js
