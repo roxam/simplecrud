@@ -31,9 +31,9 @@ npm install -g karma-cli
 ```
 npm run dev
 ```
-Now open your browser of choice and go to the index page at: [http://localhost:3000][http://localhost:3000]
+Now open your browser of choice and go to the index page at: [http://localhost:3000](http://localhost:3000)
 
-Add some new articles at: [http://localhost:3000/admin][http://localhost:3000/admin]
+Add some new articles at: [http://localhost:3000/admin](http://localhost:3000/admin)
 
 ###4. (Optional) End-to-end testing using Protractor
 
