@@ -1,4 +1,5 @@
-
+"use strict";
+/* globals angular */
 (function(){
 
     var app = angular.module('articleApp',[]);

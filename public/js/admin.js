@@ -1,3 +1,5 @@
+"use strict";
+/* globals angular, $ */
 (function(){
 
     var admin = angular.module('articleAdmin',[]);

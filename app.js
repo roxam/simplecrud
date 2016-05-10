@@ -1,3 +1,5 @@
+"use strict";
+/* globals require, console, module */
 var express = require("express");
 var bodyParser = require("body-parser");
 var mongodb = require('mongodb');
@@ -5,7 +7,6 @@ var app = express();
 
 var url = 'mongodb://localhost:27017/simplecrud';
 var MongoClient = mongodb.MongoClient;
-
 var db = '';
 
 MongoClient.connect(url, function (err, database) {
@@ -46,6 +47,6 @@ app.get('/admin', function(req, res) {
 
 exports.closeServer = function(){
   server.close();
-}
+};
 
 module.exports = app;

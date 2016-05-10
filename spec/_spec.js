@@ -1,15 +1,3 @@
-/*describe("getGreeting", function() {
-  var greeter;
-  beforeEach(module('demo'));
-  beforeEach(inject(function(_greeter_) {
-    greeter = _greeter_;
-  }));
-
-  it("says Hi Ho", function() {
-    expect(greeter.getGreeting("Dave")).toEqual("Hello Dave");
-  });
-});*/
-
 describe('articleApp', function () {
         
     beforeEach(angular.mock.module('articleApp'));
@@ -22,7 +10,7 @@ describe('articleApp', function () {
         it('should demonstrate using when (200 status)', inject(function($http) {
               var $scope = {};
 
-              /* Code Under Test */
+              /* Check that a mock http server is running */
               $http.get('http://localhost:3000/articles')
                 .success(function(data, status, headers, config) {
                   $scope.valid = true;
@@ -38,12 +26,17 @@ describe('articleApp', function () {
                 $httpBackend = $injector.get('$httpBackend');
               });
 
+              /* 
+              Run the mock http server using httpBackend
+              Send fake result 
+              */
               $httpBackend
                 .when('GET', 'http://localhost:3000/articles')
                 .respond(200, { foo: 'bar' });
 
               $httpBackend.flush();
 
+              /* expect fake result */
               expect($scope.valid).toBe(true);
               expect($scope.response).toEqual({ foo: 'bar' });
         }));
