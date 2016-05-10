@@ -21,6 +21,8 @@ MongoClient.connect(url, function (err, database) {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
+/* makes it so you can access external js libraries in the node_modules directory */
+app.use("/node_modules", express.static('node_modules'));
 app.use(express.static("./public"));
 
 /* GET articles page */
