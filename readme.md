@@ -2,6 +2,8 @@
 
 ## A simple CRUD<sup>[1](#CRUD)</sup> app for the MEAN<sup>[2](#MEAN)</sup> stack
 
+There is some simple unit testing (Jasmine, Karma) and end-to-end testing (Protractor) included. The unit tests run on file change, the end-to-end section is the optional step 4. [Why were these technologies chosen?](docs/why.md)
+
 All commands are run on a command line - on a Mac, this is in the Terminal app. 
 
 ###1. Prerequisites
